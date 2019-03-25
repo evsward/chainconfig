@@ -235,6 +235,7 @@ def resign(account, controller):
 
 def randomTransfer(b, e):
     for j in range(20):
+        print(j)
         src = accounts[random.randint(b, e - 1)]['name']
         dest = src
         while dest == src:
