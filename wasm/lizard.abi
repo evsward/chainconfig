@@ -1,7 +1,21 @@
 {
-    "____comment": "This file was generated with eosio-abigen. DO NOT EDIT Mon Mar 18 14:50:48 2019",
+    "____comment": "This file was generated with eosio-abigen. DO NOT EDIT Wed Apr  3 13:42:28 2019",
     "version": "eosio::abi/1.1",
     "structs": [
+        {
+            "name": "alias_info",
+            "base": "",
+            "fields": [
+                {
+                    "name": "aliasId",
+                    "type": "uint32"
+                },
+                {
+                    "name": "account",
+                    "type": "name"
+                }
+            ]
+        },
         {
             "name": "closetable",
             "base": "",
@@ -83,6 +97,92 @@
             ]
         },
         {
+            "name": "edittable",
+            "base": "",
+            "fields": [
+                {
+                    "name": "tableId",
+                    "type": "uint64"
+                },
+                {
+                    "name": "isPrivate",
+                    "type": "bool"
+                },
+                {
+                    "name": "code",
+                    "type": "name"
+                },
+                {
+                    "name": "sym",
+                    "type": "string"
+                },
+                {
+                    "name": "commission_rate_agent",
+                    "type": "string"
+                },
+                {
+                    "name": "commission_rate_player",
+                    "type": "string"
+                },
+                {
+                    "name": "oneRoundMaxTotalBet_bsoe",
+                    "type": "asset"
+                },
+                {
+                    "name": "minPerBet_bsoe",
+                    "type": "asset"
+                },
+                {
+                    "name": "oneRoundMaxTotalBet_anytri",
+                    "type": "asset"
+                },
+                {
+                    "name": "minPerBet_anytri",
+                    "type": "asset"
+                },
+                {
+                    "name": "oneRoundMaxTotalBet_trinum",
+                    "type": "asset"
+                },
+                {
+                    "name": "minPerBet_trinum",
+                    "type": "asset"
+                },
+                {
+                    "name": "oneRoundMaxTotalBet_pairnum",
+                    "type": "asset"
+                },
+                {
+                    "name": "minPerBet_pairnum",
+                    "type": "asset"
+                },
+                {
+                    "name": "oneRoundMaxTotalBet_txx",
+                    "type": "asset"
+                },
+                {
+                    "name": "minPerBet_txx",
+                    "type": "asset"
+                },
+                {
+                    "name": "oneRoundMaxTotalBet_twocom",
+                    "type": "asset"
+                },
+                {
+                    "name": "minPerBet_twocom",
+                    "type": "asset"
+                },
+                {
+                    "name": "oneRoundMaxTotalBet_single",
+                    "type": "asset"
+                },
+                {
+                    "name": "minPerBet_single",
+                    "type": "asset"
+                }
+            ]
+        },
+        {
             "name": "endbet",
             "base": "",
             "fields": [
@@ -148,6 +248,14 @@
                 },
                 {
                     "name": "sym",
+                    "type": "string"
+                },
+                {
+                    "name": "commission_rate_agent",
+                    "type": "string"
+                },
+                {
+                    "name": "commission_rate_player",
                     "type": "string"
                 },
                 {
@@ -247,6 +355,14 @@
                 {
                     "name": "dBonus",
                     "type": "asset"
+                },
+                {
+                    "name": "agent",
+                    "type": "string"
+                },
+                {
+                    "name": "nickname",
+                    "type": "string"
                 }
             ]
         },
@@ -265,6 +381,28 @@
                 {
                     "name": "bet",
                     "type": "string"
+                },
+                {
+                    "name": "agentalias",
+                    "type": "string"
+                },
+                {
+                    "name": "nickname",
+                    "type": "string"
+                }
+            ]
+        },
+        {
+            "name": "pushaliasnam",
+            "base": "",
+            "fields": [
+                {
+                    "name": "alias",
+                    "type": "string"
+                },
+                {
+                    "name": "account",
+                    "type": "name"
                 }
             ]
         },
@@ -373,6 +511,14 @@
                 {
                     "name": "amountSymbol",
                     "type": "extended_symbol"
+                },
+                {
+                    "name": "commission_rate_agent",
+                    "type": "float64"
+                },
+                {
+                    "name": "commission_rate_player",
+                    "type": "float64"
                 },
                 {
                     "name": "betStartTime",
@@ -520,6 +666,11 @@
             "ricardian_contract": ""
         },
         {
+            "name": "edittable",
+            "type": "edittable",
+            "ricardian_contract": ""
+        },
+        {
             "name": "endbet",
             "type": "endbet",
             "ricardian_contract": ""
@@ -555,6 +706,11 @@
             "ricardian_contract": ""
         },
         {
+            "name": "pushaliasnam",
+            "type": "pushaliasnam",
+            "ricardian_contract": ""
+        },
+        {
             "name": "serverseed",
             "type": "serverseed",
             "ricardian_contract": ""
@@ -576,6 +732,13 @@
         }
     ],
     "tables": [
+        {
+            "name": "aliasinfo",
+            "type": "alias_info",
+            "index_type": "i64",
+            "key_names": [],
+            "key_types": []
+        },
         {
             "name": "tablesinfo",
             "type": "table_stats",

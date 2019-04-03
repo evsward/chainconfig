@@ -1,7 +1,21 @@
 {
-    "____comment": "This file was generated with eosio-abigen. DO NOT EDIT Mon Mar 18 14:00:47 2019",
+    "____comment": "This file was generated with eosio-abigen. DO NOT EDIT Wed Apr  3 13:42:09 2019",
     "version": "eosio::abi/1.1",
     "structs": [
+        {
+            "name": "alias_info",
+            "base": "",
+            "fields": [
+                {
+                    "name": "aliasId",
+                    "type": "uint32"
+                },
+                {
+                    "name": "account",
+                    "type": "name"
+                }
+            ]
+        },
         {
             "name": "card_info",
             "base": "",
@@ -101,6 +115,60 @@
             ]
         },
         {
+            "name": "edittable",
+            "base": "",
+            "fields": [
+                {
+                    "name": "tableId",
+                    "type": "uint64"
+                },
+                {
+                    "name": "isPrivate",
+                    "type": "bool"
+                },
+                {
+                    "name": "code",
+                    "type": "name"
+                },
+                {
+                    "name": "sym",
+                    "type": "string"
+                },
+                {
+                    "name": "commission_rate_agent",
+                    "type": "string"
+                },
+                {
+                    "name": "commission_rate_player",
+                    "type": "string"
+                },
+                {
+                    "name": "oneRoundMaxTotalBet_bp",
+                    "type": "asset"
+                },
+                {
+                    "name": "minPerBet_bp",
+                    "type": "asset"
+                },
+                {
+                    "name": "oneRoundMaxTotalBet_tie",
+                    "type": "asset"
+                },
+                {
+                    "name": "minPerBet_tie",
+                    "type": "asset"
+                },
+                {
+                    "name": "oneRoundMaxTotalBet_push",
+                    "type": "asset"
+                },
+                {
+                    "name": "minPerBet_push",
+                    "type": "asset"
+                }
+            ]
+        },
+        {
             "name": "endbet",
             "base": "",
             "fields": [
@@ -166,6 +234,14 @@
                 },
                 {
                     "name": "sym",
+                    "type": "string"
+                },
+                {
+                    "name": "commission_rate_agent",
+                    "type": "string"
+                },
+                {
+                    "name": "commission_rate_player",
                     "type": "string"
                 },
                 {
@@ -249,6 +325,14 @@
                 {
                     "name": "dBonus",
                     "type": "asset"
+                },
+                {
+                    "name": "agent",
+                    "type": "string"
+                },
+                {
+                    "name": "nickname",
+                    "type": "string"
                 }
             ]
         },
@@ -283,6 +367,28 @@
                 {
                     "name": "betPlayerPush",
                     "type": "asset"
+                },
+                {
+                    "name": "agentalias",
+                    "type": "string"
+                },
+                {
+                    "name": "nickname",
+                    "type": "string"
+                }
+            ]
+        },
+        {
+            "name": "pushaliasnam",
+            "base": "",
+            "fields": [
+                {
+                    "name": "alias",
+                    "type": "string"
+                },
+                {
+                    "name": "account",
+                    "type": "name"
                 }
             ]
         },
@@ -301,6 +407,56 @@
             ]
         },
         {
+            "name": "shuffle",
+            "base": "",
+            "fields": [
+                {
+                    "name": "tableId",
+                    "type": "uint64"
+                }
+            ]
+        },
+        {
+            "name": "shuffle_info",
+            "base": "",
+            "fields": [
+                {
+                    "name": "tableId",
+                    "type": "uint64"
+                },
+                {
+                    "name": "firstCard",
+                    "type": "card_info"
+                },
+                {
+                    "name": "threeResults",
+                    "type": "shuffle_round_result[]"
+                }
+            ]
+        },
+        {
+            "name": "shuffle_round_result",
+            "base": "",
+            "fields": [
+                {
+                    "name": "roundNum",
+                    "type": "uint64"
+                },
+                {
+                    "name": "roundResult",
+                    "type": "string"
+                },
+                {
+                    "name": "playerHands",
+                    "type": "card_info[]"
+                },
+                {
+                    "name": "bankerHands",
+                    "type": "card_info[]"
+                }
+            ]
+        },
+        {
             "name": "table_stats",
             "base": "",
             "fields": [
@@ -310,6 +466,10 @@
                 },
                 {
                     "name": "tableId",
+                    "type": "uint64"
+                },
+                {
+                    "name": "cardBoot",
                     "type": "uint64"
                 },
                 {
@@ -361,8 +521,16 @@
                     "type": "asset"
                 },
                 {
-                    "name": "amontSymbol",
+                    "name": "amountSymbol",
                     "type": "extended_symbol"
+                },
+                {
+                    "name": "commission_rate_agent",
+                    "type": "float32"
+                },
+                {
+                    "name": "commission_rate_player",
+                    "type": "float32"
                 },
                 {
                     "name": "betStartTime",
@@ -498,6 +666,11 @@
             "ricardian_contract": ""
         },
         {
+            "name": "edittable",
+            "type": "edittable",
+            "ricardian_contract": ""
+        },
+        {
             "name": "endbet",
             "type": "endbet",
             "ricardian_contract": ""
@@ -533,8 +706,18 @@
             "ricardian_contract": ""
         },
         {
+            "name": "pushaliasnam",
+            "type": "pushaliasnam",
+            "ricardian_contract": ""
+        },
+        {
             "name": "serverseed",
             "type": "serverseed",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "shuffle",
+            "type": "shuffle",
             "ricardian_contract": ""
         },
         {
@@ -554,6 +737,20 @@
         }
     ],
     "tables": [
+        {
+            "name": "aliasinfo",
+            "type": "alias_info",
+            "index_type": "i64",
+            "key_names": [],
+            "key_types": []
+        },
+        {
+            "name": "shuffleinfo",
+            "type": "shuffle_info",
+            "index_type": "i64",
+            "key_names": [],
+            "key_types": []
+        },
         {
             "name": "tablesinfo",
             "type": "table_stats",
