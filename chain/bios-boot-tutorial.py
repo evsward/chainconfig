@@ -26,6 +26,7 @@ systemAccounts = [
     'eosio.stake',
     'eosio.token',
     'eosio.vpay',
+    'eosio.rex'
 ]
 
 def jsonArg(a):
@@ -298,6 +299,7 @@ def stepCreateTokens():
     run(args.cleos + 'push action eosio.token issue \'["eosio", "%s", "memo"]\' -p eosio' % intToCurrency(totalAllocation))
     sleep(1)
 def stepSetSystemContract():
+    retry(args.cleos + 'set contract eosio.rex ' + args.contracts_dir + '/eosio.system/ eosio.system.wasm rex.results.abi ')
     retry(args.cleos + 'set contract eosio ' + args.contracts_dir + '/eosio.system/')
     sleep(1)
     run(args.cleos + 'push action eosio setpriv' + jsonArg(['eosio.msig', 1]) + '-p eosio@active')
@@ -360,7 +362,7 @@ parser.add_argument('--private-Key', metavar='', help="EOSIO Private Key", defau
 parser.add_argument('--cleos', metavar='', help="Cleos command", default='cleos --wallet-url http://127.0.0.1:6666 ')
 parser.add_argument('--nodeos', metavar='', help="Path to nodeos binary", default='nodeos')
 parser.add_argument('--keosd', metavar='', help="Path to keosd binary", default='keosd')
-parser.add_argument('--contracts-dir', metavar='', help="Path to contracts directory", default='../../eosio.contracts/build')
+parser.add_argument('--contracts-dir', metavar='', help="Path to contracts directory", default='../../eosio.contracts/build/contracts')
 parser.add_argument('--nodes-dir', metavar='', help="Path to nodes directory", default='./nodes/')
 parser.add_argument('--genesis', metavar='', help="Path to genesis.json", default="./genesis.json")
 parser.add_argument('--wallet-dir', metavar='', help="Path to wallet directory", default='./wallet/')
