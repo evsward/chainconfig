@@ -11,6 +11,7 @@ token)
     cleos --wallet-url http://127.0.0.1:6666 get currency balance useraaaaaaaj useraaaaaaab "TES"
     cleos --wallet-url http://127.0.0.1:6666 get currency balance useraaaaaaaj useraaaaaaac "TES"
     cleos --wallet-url http://127.0.0.1:6666 get currency balance useraaaaaaaj useraaaaaaad "TES"
+    cleos --wallet-url http://127.0.0.1:6666 get currency balance useraaaaaaaj useraaaaaaak "TES"
     ;;
 mallard)
     cleos --wallet-url http://127.0.0.1:6666 system newaccount useraaaaaaak gamemallards EOS8Znrtgwt8TfpmbVpTKvA2oB8Nqey625CLN8bCN3TEbgx86Dsvr --buy-ram "100 SYS" --stake-net "100 SYS" --stake-cpu "100 SYS" --transfer
