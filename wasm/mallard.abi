@@ -1,5 +1,5 @@
 {
-    "____comment": "This file was generated with eosio-abigen. DO NOT EDIT Wed Apr 10 17:07:38 2019",
+    "____comment": "This file was generated with eosio-abigen. DO NOT EDIT Wed Apr 17 12:54:16 2019",
     "version": "eosio::abi/1.1",
     "structs": [
         {
@@ -31,6 +31,16 @@
                 {
                     "name": "cardColor",
                     "type": "uint8"
+                }
+            ]
+        },
+        {
+            "name": "clear12cache",
+            "base": "",
+            "fields": [
+                {
+                    "name": "key",
+                    "type": "int64"
                 }
             ]
         },
@@ -73,20 +83,6 @@
             ]
         },
         {
-            "name": "dealerseed",
-            "base": "",
-            "fields": [
-                {
-                    "name": "tableId",
-                    "type": "uint64"
-                },
-                {
-                    "name": "encodeSeed",
-                    "type": "checksum256"
-                }
-            ]
-        },
-        {
             "name": "dealerwitdaw",
             "base": "",
             "fields": [
@@ -104,10 +100,6 @@
             "name": "depositable",
             "base": "",
             "fields": [
-                {
-                    "name": "dealer",
-                    "type": "name"
-                },
                 {
                     "name": "tableId",
                     "type": "uint64"
@@ -197,16 +189,6 @@
             ]
         },
         {
-            "name": "erasingdata",
-            "base": "",
-            "fields": [
-                {
-                    "name": "key",
-                    "type": "uint64"
-                }
-            ]
-        },
-        {
             "name": "exitruteship",
             "base": "",
             "fields": [
@@ -227,6 +209,24 @@
                 {
                     "name": "contract",
                     "type": "name"
+                }
+            ]
+        },
+        {
+            "name": "hashseed",
+            "base": "",
+            "fields": [
+                {
+                    "name": "tableId",
+                    "type": "uint64"
+                },
+                {
+                    "name": "dealerHashSeed",
+                    "type": "checksum256"
+                },
+                {
+                    "name": "serverHashSeed",
+                    "type": "checksum256"
                 }
             ]
         },
@@ -369,6 +369,14 @@
                 {
                     "name": "nickname",
                     "type": "string"
+                },
+                {
+                    "name": "playercommission",
+                    "type": "asset"
+                },
+                {
+                    "name": "agentcommission",
+                    "type": "asset"
                 }
             ]
         },
@@ -425,20 +433,6 @@
                 {
                     "name": "account",
                     "type": "name"
-                }
-            ]
-        },
-        {
-            "name": "serverseed",
-            "base": "",
-            "fields": [
-                {
-                    "name": "tableId",
-                    "type": "uint64"
-                },
-                {
-                    "name": "encodeSeed",
-                    "type": "checksum256"
                 }
             ]
         },
@@ -502,6 +496,10 @@
                 },
                 {
                     "name": "tableId",
+                    "type": "uint64"
+                },
+                {
+                    "name": "tableStatus",
                     "type": "uint64"
                 },
                 {
@@ -570,10 +568,6 @@
                 },
                 {
                     "name": "betStartTime",
-                    "type": "uint64"
-                },
-                {
-                    "name": "tableStatus",
                     "type": "uint64"
                 },
                 {
@@ -672,6 +666,11 @@
     "types": [],
     "actions": [
         {
+            "name": "clear12cache",
+            "type": "clear12cache",
+            "ricardian_contract": ""
+        },
+        {
             "name": "closetable",
             "type": "closetable",
             "ricardian_contract": ""
@@ -679,11 +678,6 @@
         {
             "name": "continuetable",
             "type": "continuetable",
-            "ricardian_contract": ""
-        },
-        {
-            "name": "dealerseed",
-            "type": "dealerseed",
             "ricardian_contract": ""
         },
         {
@@ -712,13 +706,13 @@
             "ricardian_contract": ""
         },
         {
-            "name": "erasingdata",
-            "type": "erasingdata",
+            "name": "exitruteship",
+            "type": "exitruteship",
             "ricardian_contract": ""
         },
         {
-            "name": "exitruteship",
-            "type": "exitruteship",
+            "name": "hashseed",
+            "type": "hashseed",
             "ricardian_contract": ""
         },
         {
@@ -749,11 +743,6 @@
         {
             "name": "pushaliasnam",
             "type": "pushaliasnam",
-            "ricardian_contract": ""
-        },
-        {
-            "name": "serverseed",
-            "type": "serverseed",
             "ricardian_contract": ""
         },
         {
