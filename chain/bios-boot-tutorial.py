@@ -114,6 +114,7 @@ def startNode(nodeIndex, account):
         '    --max-clients ' + str(maxClients) +
         '    --p2p-max-nodes-per-host ' + str(maxClients) +
         '    --enable-stale-production'
+        '    --max-transaction-time 50'
         '    --producer-name ' + account['name'] +
         '    --private-key \'["' + account['pub'] + '","' + account['pvt'] + '"]\''
         '    --plugin eosio::http_plugin'
@@ -377,7 +378,6 @@ parser.add_argument('--num-producers-vote', metavar='', help="Number of producer
 parser.add_argument('--num-voters', metavar='', help="Number of voters", type=int, default=10)
 parser.add_argument('--num-senders', metavar='', help="Number of users to transfer funds randomly", type=int, default=10)
 parser.add_argument('--producer-sync-delay', metavar='', help="Time (s) to sleep to allow producers to sync", type=int, default=80)
-parser.add_argument('--max-transaction-time', metavar='', help="Limits the maximum time of push trx", type=int, default=50)
 parser.add_argument('-a', '--all', action='store_true', help="Do everything marked with (*)")
 parser.add_argument('-H', '--http-port', type=int, default=8888, metavar='', help='HTTP port for cleos')
 
