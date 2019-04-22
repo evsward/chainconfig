@@ -368,7 +368,7 @@ parser.add_argument('--wallet-dir', metavar='', help="Path to wallet directory",
 parser.add_argument('--log-path', metavar='', help="Path to log file", default='./output.log')
 parser.add_argument('--symbol', metavar='', help="The eosio.system symbol", default='SYS')
 parser.add_argument('--user-limit', metavar='', help="Max number of users. (0 = no limit)", type=int, default=20)
-parser.add_argument('--max-user-keys', metavar='', help="Maximum user keys to import into wallet", type=int, default=30)
+parser.add_argument('--max-user-keys', metavar='', help="Maximum user keys to import into wallet", type=int, default=32)
 parser.add_argument('--ram-funds', metavar='', help="How much funds for each user to spend on ram", type=float, default=0.1)
 parser.add_argument('--min-stake', metavar='', help="Minimum stake before allocating unstaked funds", type=float, default=0.9)
 parser.add_argument('--max-unstaked', metavar='', help="Maximum unstaked funds", type=float, default=100000)
