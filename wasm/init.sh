@@ -23,6 +23,7 @@ mallard)
     cleos --wallet-url http://127.0.0.1:6666 set contract gamemallards ./ mallard.wasm mallard.abi
     # init symbol
     cleos --wallet-url http://127.0.0.1:6666 get currency balance useraaaaaaaj gamemallards "TES"
+    cleos --wallet-url http://127.0.0.1:6666 get currency balance eosio.token gamemallards "SYS"
     cleos --wallet-url http://127.0.0.1:6666 push action gamemallards initsymbol '["useraaaaaaaj","TES","0.1000 TES"]' -p gamemallards
     cleos --wallet-url http://127.0.0.1:6666 push action gamemallards initsymbol '["eosio.token","SYS","0.1000 SYS"]' -p gamemallards
     cleos get table gamemallards gamemallards currencyinfo
@@ -39,6 +40,7 @@ lizard)
     cleos --wallet-url http://127.0.0.1:6666 set contract game12lizard ./ lizard.wasm lizard.abi
     # init symbol
     cleos --wallet-url http://127.0.0.1:6666 get currency balance useraaaaaaaj game12lizard "TES"
+    cleos --wallet-url http://127.0.0.1:6666 get currency balance eosio.token game12lizard "SYS"
     cleos --wallet-url http://127.0.0.1:6666 push action game12lizard initsymbol '["useraaaaaaaj","TES","0.1000 TES"]' -p game12lizard
     cleos --wallet-url http://127.0.0.1:6666 push action game12lizard initsymbol '["eosio.token","SYS","0.1000 SYS"]' -p game12lizard
     cleos get table game12lizard game12lizard currencyinfo
