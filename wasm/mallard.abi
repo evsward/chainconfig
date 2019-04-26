@@ -1,21 +1,7 @@
 {
-    "____comment": "This file was generated with eosio-abigen. DO NOT EDIT Wed Apr 17 18:06:52 2019",
+    "____comment": "This file was generated with eosio-abigen. DO NOT EDIT Fri Apr 26 14:01:40 2019",
     "version": "eosio::abi/1.1",
     "structs": [
-        {
-            "name": "alias_info",
-            "base": "",
-            "fields": [
-                {
-                    "name": "aliasId",
-                    "type": "uint32"
-                },
-                {
-                    "name": "account",
-                    "type": "name"
-                }
-            ]
-        },
         {
             "name": "card_info",
             "base": "",
@@ -73,7 +59,7 @@
                     "type": "name"
                 },
                 {
-                    "name": "symName",
+                    "name": "sym",
                     "type": "symbol"
                 },
                 {
@@ -227,6 +213,92 @@
             ]
         },
         {
+            "name": "import12data",
+            "base": "",
+            "fields": [
+                {
+                    "name": "tableId",
+                    "type": "uint64"
+                },
+                {
+                    "name": "tableStatus",
+                    "type": "uint64"
+                },
+                {
+                    "name": "cardBoot",
+                    "type": "uint64"
+                },
+                {
+                    "name": "dealer",
+                    "type": "name"
+                },
+                {
+                    "name": "trusteeship",
+                    "type": "bool"
+                },
+                {
+                    "name": "isPrivate",
+                    "type": "bool"
+                },
+                {
+                    "name": "dealerBalance",
+                    "type": "asset"
+                },
+                {
+                    "name": "oneRoundMaxTotalBet_BP",
+                    "type": "asset"
+                },
+                {
+                    "name": "minPerBet_BP",
+                    "type": "asset"
+                },
+                {
+                    "name": "oneRoundMaxTotalBet_Tie",
+                    "type": "asset"
+                },
+                {
+                    "name": "minPerBet_Tie",
+                    "type": "asset"
+                },
+                {
+                    "name": "oneRoundMaxTotalBet_Push",
+                    "type": "asset"
+                },
+                {
+                    "name": "minPerBet_Push",
+                    "type": "asset"
+                },
+                {
+                    "name": "oneRoundDealerMaxPay",
+                    "type": "asset"
+                },
+                {
+                    "name": "minTableDeposit",
+                    "type": "asset"
+                },
+                {
+                    "name": "commission_rate_agent",
+                    "type": "float32"
+                },
+                {
+                    "name": "commission_rate_player",
+                    "type": "float32"
+                },
+                {
+                    "name": "upgradingFlag",
+                    "type": "bool"
+                },
+                {
+                    "name": "amountSymbol",
+                    "type": "extended_symbol"
+                },
+                {
+                    "name": "validCardVec",
+                    "type": "uint16[]"
+                }
+            ]
+        },
+        {
             "name": "initsymbol",
             "base": "",
             "fields": [
@@ -364,7 +436,7 @@
                 },
                 {
                     "name": "agent",
-                    "type": "string"
+                    "type": "name"
                 },
                 {
                     "name": "nickname",
@@ -413,26 +485,12 @@
                     "type": "asset"
                 },
                 {
-                    "name": "agentalias",
-                    "type": "string"
+                    "name": "agent",
+                    "type": "name"
                 },
                 {
                     "name": "nickname",
                     "type": "string"
-                }
-            ]
-        },
-        {
-            "name": "pushaliasnam",
-            "base": "",
-            "fields": [
-                {
-                    "name": "alias",
-                    "type": "string"
-                },
-                {
-                    "name": "account",
-                    "type": "name"
                 }
             ]
         },
@@ -581,6 +639,14 @@
                     "type": "float32"
                 },
                 {
+                    "name": "upgradingFlag",
+                    "type": "bool"
+                },
+                {
+                    "name": "redundancy",
+                    "type": "string"
+                },
+                {
                     "name": "betStartTime",
                     "type": "uint64"
                 },
@@ -645,6 +711,16 @@
                 {
                     "name": "tableId",
                     "type": "uint64"
+                }
+            ]
+        },
+        {
+            "name": "upgrading",
+            "base": "",
+            "fields": [
+                {
+                    "name": "isupgrading",
+                    "type": "bool"
                 }
             ]
         },
@@ -730,6 +806,11 @@
             "ricardian_contract": ""
         },
         {
+            "name": "import12data",
+            "type": "import12data",
+            "ricardian_contract": ""
+        },
+        {
             "name": "initsymbol",
             "type": "initsymbol",
             "ricardian_contract": ""
@@ -755,11 +836,6 @@
             "ricardian_contract": ""
         },
         {
-            "name": "pushaliasnam",
-            "type": "pushaliasnam",
-            "ricardian_contract": ""
-        },
-        {
             "name": "serverseed",
             "type": "serverseed",
             "ricardian_contract": ""
@@ -775,6 +851,11 @@
             "ricardian_contract": ""
         },
         {
+            "name": "upgrading",
+            "type": "upgrading",
+            "ricardian_contract": ""
+        },
+        {
             "name": "verdealeseed",
             "type": "verdealeseed",
             "ricardian_contract": ""
@@ -786,13 +867,6 @@
         }
     ],
     "tables": [
-        {
-            "name": "aliasinfo",
-            "type": "alias_info",
-            "index_type": "i64",
-            "key_names": [],
-            "key_types": []
-        },
         {
             "name": "currencyinfo",
             "type": "currency_info",
