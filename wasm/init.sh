@@ -12,7 +12,7 @@ token)
     cleos --wallet-url http://127.0.0.1:6666 get currency balance useraaaaaaaj useraaaaaaad "TES"
     ;;
 mallard)
-    cleos --wallet-url http://127.0.0.1:6666 system newaccount useraaaaaaak gamemallards EOS8Znrtgwt8TfpmbVpTKvA2oB8Nqey625CLN8bCN3TEbgx86Dsvr --buy-ram "100 SYS" --stake-net "100 SYS" --stake-cpu "100 SYS" --transfer
+    cleos --wallet-url http://127.0.0.1:6666 system newaccount useraaaaaaak gamemallards EOS7yBtksm8Kkg85r4in4uCbfN77uRwe82apM8jjbhFVDgEgz3w8S --buy-ram "100 SYS" --stake-net "100 SYS" --stake-cpu "100 SYS" --transfer
     cleos --wallet-url http://127.0.0.1:6666 transfer useraaaaaaab gamemallards "10.0000 SYS" -p useraaaaaaab
     cleos --wallet-url http://127.0.0.1:6666 push action useraaaaaaaj issue '["gamemallards","1.0000 TES","xxx"]' -p useraaaaaaai
     cleos --wallet-url http://127.0.0.1:6666 set account permission useraaaaaaab active '{"threshold":1,"keys":[{"key":"EOS7yBtksm8Kkg85r4in4uCbfN77uRwe82apM8jjbhFVDgEgz3w8S","weight":1}],"accounts":[{"permission":{"actor":"gamemallards","permission":"eosio.code"},"weight":1}]}' owner -p useraaaaaaab
@@ -29,7 +29,7 @@ mallard)
     cleos get table gamemallards gamemallards currencyinfo
     ;;
 lizard)
-    cleos --wallet-url http://127.0.0.1:6666 system newaccount useraaaaaaak game12lizard EOS8Znrtgwt8TfpmbVpTKvA2oB8Nqey625CLN8bCN3TEbgx86Dsvr --buy-ram "1000 SYS" --stake-net "1000 SYS" --stake-cpu "1000 SYS" --transfer
+    cleos --wallet-url http://127.0.0.1:6666 system newaccount useraaaaaaak game12lizard EOS7yBtksm8Kkg85r4in4uCbfN77uRwe82apM8jjbhFVDgEgz3w8S --buy-ram "1000 SYS" --stake-net "1000 SYS" --stake-cpu "1000 SYS" --transfer
     cleos --wallet-url http://127.0.0.1:6666 transfer useraaaaaaab game12lizard "10.0000 SYS" -p useraaaaaaab
     cleos --wallet-url http://127.0.0.1:6666 push action useraaaaaaaj issue '["game12lizard","1.0000 TES","xxx"]' -p useraaaaaaai
     cleos --wallet-url http://127.0.0.1:6666 set account permission useraaaaaaba active '{"threshold":1,"keys":[{"key":"EOS7yBtksm8Kkg85r4in4uCbfN77uRwe82apM8jjbhFVDgEgz3w8S","weight":1}],"accounts":[{"permission":{"actor":"game12lizard","permission":"eosio.code"},"weight":1}]}' owner -p useraaaaaaba
