@@ -109,7 +109,8 @@ def startNode(nodeIndex, account):
         '    --data-dir ' + os.path.abspath(dir) +
         '    --chain-state-db-size-mb 1024'
         '    --access-control-allow-origin=*'
-        '    --http-server-address 0.0.0.0:' + str(8888 + nodeIndex) +
+        '    --access-control-allow-headers=content-type'
+        '    --http-server-address 0.0.0.0:' + str(43547 + nodeIndex) +
         '    --p2p-listen-endpoint 127.0.0.1:' + str(9000 + nodeIndex) +
         '    --max-clients ' + str(maxClients) +
         '    --p2p-max-nodes-per-host ' + str(maxClients) +
@@ -379,7 +380,7 @@ parser.add_argument('--num-voters', metavar='', help="Number of voters", type=in
 parser.add_argument('--num-senders', metavar='', help="Number of users to transfer funds randomly", type=int, default=10)
 parser.add_argument('--producer-sync-delay', metavar='', help="Time (s) to sleep to allow producers to sync", type=int, default=80)
 parser.add_argument('-a', '--all', action='store_true', help="Do everything marked with (*)")
-parser.add_argument('-H', '--http-port', type=int, default=8888, metavar='', help='HTTP port for cleos')
+parser.add_argument('-H', '--http-port', type=int, default=43547, metavar='', help='HTTP port for cleos')
 
 for (flag, command, function, inAll, help) in commands:
     prefix = ''
