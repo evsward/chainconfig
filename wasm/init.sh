@@ -37,7 +37,7 @@ lizard)
     cleos --url http://127.0.0.1:51043 --wallet-url http://127.0.0.1:6666 set account permission useraaaaaabc active '{"threshold":1,"keys":[{"key":"EOS7Bn1YDeZ18w2N9DU4KAJxZDt6hk3L7eUwFRAc1hb5bp6xJwxNV","weight":1}],"accounts":[{"permission":{"actor":"game12lizard","permission":"eosio.code"},"weight":1}]}' owner -p useraaaaaabc
     cleos --url http://127.0.0.1:51043 --wallet-url http://127.0.0.1:6666 set account permission useraaaaaabd active '{"threshold":1,"keys":[{"key":"EOS7Bn1YDeZ18w2N9DU4KAJxZDt6hk3L7eUwFRAc1hb5bp6xJwxNV","weight":1}],"accounts":[{"permission":{"actor":"game12lizard","permission":"eosio.code"},"weight":1}]}' owner -p useraaaaaabd
     cleos --url http://127.0.0.1:51043 --wallet-url http://127.0.0.1:6666 set account permission game12lizard active '{"threshold":1,"keys":[{"key":"EOS69X3383RzBZj41k73CSjUNXM5MYGpnDxyPnWUKPEtYQmTBWz4D","weight":1}],"accounts":[{"permission":{"actor":"game12lizard","permission":"eosio.code"},"weight":1}]}' owner -p game12lizard
-    cleos --url http://127.0.0.1:51043 --wallet-url http://127.0.0.1:6666 set contract game12lizard ./ lizard.wasm lizard.abi
+    cleos --url http://127.0.0.1:51043 --wallet-url http://127.0.0.1:6666 set contract game12lizard ./ game12lizard.wasm game12lizard.abi
     # init symbol
     cleos --url http://127.0.0.1:51043 --wallet-url http://127.0.0.1:6666 get currency balance useraaaaaaaj game12lizard "TES"
     cleos --url http://127.0.0.1:51043 --wallet-url http://127.0.0.1:6666 get currency balance eosio.token game12lizard "SYS"
