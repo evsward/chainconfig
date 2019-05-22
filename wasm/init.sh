@@ -2,7 +2,7 @@
 case $1 in
 token)
     cleos --url http://127.0.0.1:51043 --wallet-url http://127.0.0.1:6666 system buyram useraaaaaaag useraaaaaaaj "10 SYS"
-    cleos --url http://127.0.0.1:51043 --wallet-url http://127.0.0.1:6666 set contract useraaaaaaaj /home/eos/eosio.contracts/build/eosio.token/ eosio.token.wasm eosio.token.abi
+    cleos --url http://127.0.0.1:51043 --wallet-url http://127.0.0.1:6666 set contract useraaaaaaaj eosio.token eosio.token.wasm eosio.token.abi
     cleos --url http://127.0.0.1:51043 --wallet-url http://127.0.0.1:6666 push action useraaaaaaaj create '["useraaaaaaai","100000000.0000 TES"]' -p useraaaaaaaj
     cleos --url http://127.0.0.1:51043 --wallet-url http://127.0.0.1:6666 push action useraaaaaaaj issue '["useraaaaaaab","100000.0000 TES","xxx"]' -p useraaaaaaai
     cleos --url http://127.0.0.1:51043 --wallet-url http://127.0.0.1:6666 push action useraaaaaaaj issue '["useraaaaaaac","10000.0000 TES","xxx"]' -p useraaaaaaai
