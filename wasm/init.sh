@@ -3,13 +3,13 @@ case $1 in
 token)
     cleos --url http://127.0.0.1:51043 --wallet-url http://127.0.0.1:6666 system buyram useraaaaaaag useraaaaaaaj "10 SYS"
     cleos --url http://127.0.0.1:51043 --wallet-url http://127.0.0.1:6666 set contract useraaaaaaaj eosio.token eosio.token.wasm eosio.token.abi
-    cleos --url http://127.0.0.1:51043 --wallet-url http://127.0.0.1:6666 push action useraaaaaaaj create '["useraaaaaaai","100000000.0000 TES"]' -p useraaaaaaaj
-    cleos --url http://127.0.0.1:51043 --wallet-url http://127.0.0.1:6666 push action useraaaaaaaj issue '["useraaaaaaab","100000.0000 TES","xxx"]' -p useraaaaaaai
-    cleos --url http://127.0.0.1:51043 --wallet-url http://127.0.0.1:6666 push action useraaaaaaaj issue '["useraaaaaaac","10000.0000 TES","xxx"]' -p useraaaaaaai
-    cleos --url http://127.0.0.1:51043 --wallet-url http://127.0.0.1:6666 push action useraaaaaaaj issue '["useraaaaaaad","10000.0000 TES","xxx"]' -p useraaaaaaai
-    cleos --url http://127.0.0.1:51043 --wallet-url http://127.0.0.1:6666 get currency balance useraaaaaaaj useraaaaaaab "TES"
-    cleos --url http://127.0.0.1:51043 --wallet-url http://127.0.0.1:6666 get currency balance useraaaaaaaj useraaaaaaac "TES"
-    cleos --url http://127.0.0.1:51043 --wallet-url http://127.0.0.1:6666 get currency balance useraaaaaaaj useraaaaaaad "TES"
+    cleos --url http://127.0.0.1:51043 --wallet-url http://127.0.0.1:6666 push action useraaaaaaaj create '["useraaaaaaai","1000000000.0000 EOS"]' -p useraaaaaaaj
+    cleos --url http://127.0.0.1:51043 --wallet-url http://127.0.0.1:6666 push action useraaaaaaaj issue '["useraaaaaaab","100000000.0000 EOS","xxx"]' -p useraaaaaaai
+    cleos --url http://127.0.0.1:51043 --wallet-url http://127.0.0.1:6666 push action useraaaaaaaj issue '["useraaaaaaac","100000000.0000 EOS","xxx"]' -p useraaaaaaai
+    cleos --url http://127.0.0.1:51043 --wallet-url http://127.0.0.1:6666 push action useraaaaaaaj issue '["useraaaaaaad","100000000.0000 EOS","xxx"]' -p useraaaaaaai
+    cleos --url http://127.0.0.1:51043 --wallet-url http://127.0.0.1:6666 get currency balance useraaaaaaaj useraaaaaaab "EOS"
+    cleos --url http://127.0.0.1:51043 --wallet-url http://127.0.0.1:6666 get currency balance useraaaaaaaj useraaaaaaac "EOS"
+    cleos --url http://127.0.0.1:51043 --wallet-url http://127.0.0.1:6666 get currency balance useraaaaaaaj useraaaaaaad "EOS"
     ;;
 mallard)
     cleos --url http://127.0.0.1:51043 --wallet-url http://127.0.0.1:6666 system newaccount useraaaaaaak gamemallards EOS7yBtksm8Kkg85r4in4uCbfN77uRwe82apM8jjbhFVDgEgz3w8S --buy-ram "100 SYS" --stake-net "100 SYS" --stake-cpu "100 SYS" --transfer
