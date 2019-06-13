@@ -1,6 +1,6 @@
 #!/bin/bash
 case $1 in
-    token)
+    init)
         cleos --url http://127.0.0.1:51043 --wallet-url http://127.0.0.1:6666 system buyram useraaaaaaag useraaaaaaai "10 SYS"
         cleos --url http://127.0.0.1:51043 --wallet-url http://127.0.0.1:6666 set contract useraaaaaaai eosio.token eosio.token.wasm eosio.token.abi
         cleos --url http://127.0.0.1:51043 --wallet-url http://127.0.0.1:6666 push action useraaaaaaai create '["useraaaaaaai","1000000000.0000 EOS"]' -p useraaaaaaai
@@ -10,8 +10,6 @@ case $1 in
         cleos --url http://127.0.0.1:51043 --wallet-url http://127.0.0.1:6666 get currency balance useraaaaaaai useraaaaaaab "EOS"
         cleos --url http://127.0.0.1:51043 --wallet-url http://127.0.0.1:6666 get currency balance useraaaaaaai useraaaaaaac "EOS"
         cleos --url http://127.0.0.1:51043 --wallet-url http://127.0.0.1:6666 get currency balance useraaaaaaai useraaaaaaad "EOS"
-    ;;
-    mallard)
         cleos --url http://127.0.0.1:51043 --wallet-url http://127.0.0.1:6666 system newaccount useraaaaaaak gamemallards EOS7yBtksm8Kkg85r4in4uCbfN77uRwe82apM8jjbhFVDgEgz3w8S --buy-ram "100 SYS" --stake-net "100 SYS" --stake-cpu "100 SYS" --transfer
         cleos --url http://127.0.0.1:51043 --wallet-url http://127.0.0.1:6666 transfer useraaaaaaab gamemallards "10.0000 SYS" -p useraaaaaaab
         cleos --url http://127.0.0.1:51043 --wallet-url http://127.0.0.1:6666 push action useraaaaaaai issue '["gamemallards","1.0000 EOS","xxx"]' -p useraaaaaaai
