@@ -28,6 +28,14 @@ mallard)
     cleos --url http://127.0.0.1:51043 --wallet-url http://127.0.0.1:6666 push action gamemallards initsymbol '["useraaaaaaai","EOS","0.1000 EOS"]' -p gamemallards
     cleos --url http://127.0.0.1:51043 get table gamemallards gamemallards currencyinfo
     ;;
+mallardupdate)
+    cd /home/evsward/work/wubba/games
+    ./batch.sh
+    cd bin
+    cp gamemallards.* ../../../chainconfig/wasm/
+    cd ../../../chainconfig/wasm/
+    cleos --url http://127.0.0.1:51043 --wallet-url http://127.0.0.1:6666 set contract gamemallards ./ gamemallards.wasm gamemallards.abi
+    ;;
 lizard)
     cleos --url http://127.0.0.1:51043 --wallet-url http://127.0.0.1:6666 system newaccount useraaaaaaak game12lizard EOS7yBtksm8Kkg85r4in4uCbfN77uRwe82apM8jjbhFVDgEgz3w8S --buy-ram "1000 SYS" --stake-net "1000 SYS" --stake-cpu "1000 SYS" --transfer
     cleos --url http://127.0.0.1:51043 --wallet-url http://127.0.0.1:6666 transfer useraaaaaaab game12lizard "10.0000 SYS" -p useraaaaaaab
